@@ -1,8 +1,8 @@
-=========================================================
+==========================================================
 #TEXT MINING IN R (CV SCREENING)
-=========================================================
+==========================================================
 
-#Call 'pdftools' package to extract text
+#Call 'pdftools' package for extraction from PDF documents
 library(pdftools)
 
 #Extract text from pdf
@@ -33,6 +33,8 @@ dtm=TermDocumentMatrix(CV_Corpus)
 
 #Find most frequent terms
 findFreqTerms(dtm, lowfreq = 5)
+
+#Find words associated with 'finance'
 findAssocs(dtm, terms = "finance", corlimit = 0.7)
 
 #Arranges terms in order of frequency
