@@ -2,7 +2,7 @@
 #TEXT MINING IN R (CV SCREENING)
 ==========================================================
 
-#Call 'pdftools' package for extraction from PDF documents
+#Call 'pdftools' package for pdf text extraction
 library(pdftools)
 
 #Extract text from pdf
@@ -34,18 +34,18 @@ dtm=TermDocumentMatrix(CV_Corpus)
 #Find most frequent terms
 findFreqTerms(dtm, lowfreq = 5)
 
-#Find words associated with 'finance'
-findAssocs(dtm, terms = "finance", corlimit = 0.7)
+#Find words associated with 'research'
+findAssocs(dtm, terms = "research", corlimit = 0.7)
 
 #Arranges terms in order of frequency
-sort_cv<-sort(rowSums(as.matrix(dtm)),decreasing=TRUE)
+sort_cv<-sort(dtm,decreasing=TRUE)
 sort_cv
 
-#Fequently used words
+#Top 10 most frequently used words
 df_cv<-data.frame(word=names(sort_cv),freq=sort_cv)
 head(df_cv,10)
 
-#Visualize frequent terms
+#Create barplot
 barplot(df_cv[1:10,]$freq, las = 2, names.arg = d[1:10,]$word,
         col ="lightblue", main ="Most frequent words",
         ylab = "Word frequencies")              
