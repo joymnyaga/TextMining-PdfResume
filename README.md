@@ -1,2 +1,10 @@
 # Text-Mining-in-R 
-Involves the design,implementation and visualization of the text mining technique (text summarization) using the 'tm' package foud in R. The purpose of the project is to analyze a resume in pdf format, in this case, mine.
+This project aims to analyze a resume in pdf format as unstructured text data using text mining & data visualization techniques such as
+
+•Frequency Tables
+•Association of words
+•Word Cloud
+
+
+
+
