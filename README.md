@@ -1,7 +1,8 @@
 # Text-Mining-in-R 
-This project aims to analyze a resume in pdf format as unstructured text data using text mining & data visualization techniques such as
+This project aims to analyze a resume in pdf format as unstructured text data using the (tm) package found in R
 
-•Frequency Tables
+Text mining techniques include
+•Word frequency tables
 •Association of words
 •Word Cloud
 
