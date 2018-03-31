@@ -1,2 +1,2 @@
-# Text-Mining-in-R (CV Screening)
-A personal project that aims to implement and visualize text mining techniques using the (tm) package in R
+# Text-Mining-in-R 
+Involves the design,implementation and visualization of the text mining technique (text summarization) using the (tm) package in R
