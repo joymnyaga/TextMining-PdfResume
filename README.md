@@ -1,5 +1,6 @@
-# Text-Mining-CV Screening
-A personal project that analyzes a resume in pdf format by implementing and visualizing text mining techniques using the 'tm' package in R.  
+# TextMining-PdfResume
+
+The following project aims to explore, implement and visualize  text mining techniques as applied on word processing documents, a form of unstructured data.
 
 
 
