@@ -37,7 +37,7 @@ findFreqTerms(dtm, lowfreq = 5)
 #Find words associated with 'research'
 findAssocs(dtm, terms = "research", corlimit = 0.7)
 
-#Arranges terms in order of frequency
+#Arrange terms in order of frequency
 sort_cv<-sort(dtm,decreasing=TRUE)
 sort_cv
 
@@ -54,5 +54,5 @@ barplot(df_cv[1:10,]$freq, las = 2, names.arg = d[1:10,]$word,
 library(wordcloud)
 library(RColorBrewer)
 set.seed(1234)
-wordcloud(word=d$word,freq=d$freq,minfreq=1,scale=c(3.5,0.5), colors=brewer.pal(8,"Dark2"))
+wordcloud(word=df_cv$word,freq=df_cv$freq,minfreq=1,scale=c(3.5,0.5), colors=brewer.pal(8,"Dark2"))
 
