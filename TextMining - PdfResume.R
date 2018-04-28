@@ -4,7 +4,7 @@ library(pdftools)
 #Extract text from pdf
 pdf_text("D:\\Files\\CV_1.pdf")
 
-#Spilt text into lines
+#Split text into lines
 library(magrittr)
 cv_jy<-pdf_text("D:\\Files\\CV_1.pdf") %>% strsplit(split = "\n")
 cv_jy<-pdf_text("D:\\Files\\CV_1.pdf") %>% strsplit(split = "\r")
@@ -42,7 +42,7 @@ df_cv<-data.frame(word=names(sort_cv),freq=sort_cv)
 head(df_cv,10)
 
 #Create barplot
-barplot(df_cv[1:10,]$freq, las = 2, names.arg = d[1:10,]$word,
+barplot(df_cv[1:10,]$freq, las = 2, names.arg = df_cv[1:10,]$word,
         col ="lightblue", main ="Most frequent words",
         ylab = "Word frequencies")              
 
