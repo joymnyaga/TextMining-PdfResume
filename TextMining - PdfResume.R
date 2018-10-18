@@ -27,11 +27,11 @@ CV_Corpus=tm_map(CV_Corpus,removeWords,stopwords(kind = 'en'))
 #Create Term Document Matrix
 dtm=TermDocumentMatrix(CV_Corpus)
 
+#Find words associated with 'research'
+findAssocs(dtm, terms = "research", corlimit = 0.7
+           
 #Find most frequent terms
 findFreqTerms(dtm, lowfreq = 5)
-
-#Find words associated with 'research'
-findAssocs(dtm, terms = "research", corlimit = 0.7)
 
 #Arrange terms in order of frequency
 sort_cv<-sort(dtm,decreasing=TRUE)
